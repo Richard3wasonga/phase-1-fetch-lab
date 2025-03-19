@@ -3,7 +3,7 @@ function fetchBooks() {
   fetch('https://anapioficeandfire.com/api/books')
   .then(res => res.json())
   .then(data => renderBooks(data))
-  .catch(error => console.log(error))
+  .catch(error => console.error("Error fetching books:", error));
 }
 
 function renderBooks(books) {
